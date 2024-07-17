@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header text-light bg-secondary">
+                Department List
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td>S.No</td>
+                            <td>Department Name</td>
+                            <td>Department Head</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let department of departments; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{department.deptName}}</td>
+                            <td>{{department.deptHeadName | na}}</td>
+                            <td class="col-2" style="opacity: 20px;">
+                                <button class="btn text-info bolder-0" (click)="onEdit()"><i class="fa-solid fa-pen" title="edit" aria-hidden="true"></i></button>
+                                <button class="btn text-danger bolder-0" (click)="onDelete()"><i class="fa-solid fa-trash" title="delete" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header text-light bg-secondary">
+                Create New Department
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <label>Department Name</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-12 py-3">
+                        <label>Select Department Name</label>
+                        <select class="form-select">
+                            <option  *ngFor="let dept of departments;">{{dept.deptName}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-12 text-end">
+                        <button class="btn btn-primary mx-4">Reset</button>
+                        <button class="btn btn-success mr-4">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

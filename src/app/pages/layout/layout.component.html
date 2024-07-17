@@ -1,0 +1,83 @@
+<head>
+  <meta charset="utf-8" />
+  <title>SidebarMenu by Ninety-Niners.com</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+<section>
+
+<div class="body">
+
+
+  <div class="container-fluid ">
+      <!-- <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand">Navbar</a>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+      </nav> -->
+    <div class="row">
+      <div class="col sidenav col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-secondary position">
+        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+          <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <span class="fs-5 d-none d-sm-inline">Ticket-tool-App</span>
+          </a>
+          <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fa fa-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" routerLink="/dashboard">
+                <i class="fa fa-solid fa-house"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+            </li>
+            <li>
+              <a class="nav-link" routerLink="/department">
+                <i class="fa fa-solid fa-grip"></i> <span class="ms-1 d-none d-sm-inline">Department</span></a>
+            </li>
+            <li>
+              <a class="nav-link" routerLink="/employee">
+                <i class="fa fa-solid fa-house"></i> <span class="ms-1 d-none d-sm-inline">Employee</span></a>
+            </li>
+            <li>
+              <a class="nav-link" routerLink="/tickets">
+                <i class="fa fa-solid fa-house"></i> <span class="ms-1 d-none d-sm-inline">Tickets</span> </a>
+            </li>
+            <li>
+              <a class="nav-link" routerLink="/new-ticket">
+                <i class="fa fa-solid fa-house"></i> <span class="ms-1 d-none d-sm-inline">New Tickets</span> </a>
+            </li>
+          </ul>
+          <hr>
+          <div class="dropup show pb-5 ">
+            <a class="dropup-btn btn border-0 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <img src="/Ticket-tool-App/src/app/assest/p.png" width="20" height="20" class="rounded-circle">
+              <span class="mx-1 text-white">{{users}}</span>
+            </a>
+            <ul class="dropup-content list-group text-decoration-none" style="list-style-type:none" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item py-1 " href="#" routerLink="/department">New project</a></li>
+              <li><a class="dropdown-item py-1 " href="#" routerLink="/dashboard">Settings</a></li>
+              <li><a class="dropdown-item py-1" href="#" routerLink="/employee">Profile</a></li>
+              <li><hr></li>
+              <li><a class="dropdown-item " href="#" (click)="onLogOff()">Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col main py-3">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  
+  </div>
+</div>
+</section>
+  
+  
+</body>
+
+
+
+
